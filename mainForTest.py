@@ -2,9 +2,6 @@ from flask import Flask, jsonify
 from flask_restful import Api, Resource, reqparse, abort, fields, marshal_with
 from flask_sqlalchemy import SQLAlchemy
 from flask_ngrok import run_with_ngrok
-from flask_marshmallow import Marshmallow
-
-from mainForTest import UserModel
 
 
 def abort_on_presence(presence_id):
@@ -19,11 +16,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['DEBUG'] = True
 run_with_ngrok(app)
 db = SQLAlchemy(app)
-ma = Marshmallow(app)
 
-class UserSchema(ma.Schema):
-    class Meta:
-        model = UserModel
 
 class UserModel(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -112,9 +105,7 @@ class User(Resource):
 class AllUsers(Resource):
     @marshal_with(resource_fields)
     def get(self):
-        schema = UserSchema()
-        result = schema.dump(UserModel.query.all())
-        return jsonify({'data': schema.dump(UserModel.query.all())})
+        return UserModel.query.all()
 
 
 class Languages(Resource):

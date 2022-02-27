@@ -1,0 +1,44 @@
+[
+  {
+    "UserId": 1,
+    "UserData": {
+      "UserName": "Rushil",
+      "UserEmail": "RUSH@gmail.com",
+      "SignUpMethods": {
+        "google": true,
+        "facebook": false
+      },
+      "UserPassword": "ank",
+      "ForgotPassUse": 0,
+      "Friends": {
+        "1": {
+          "Name": "jhon",
+          "FriendCode": "1eh2r37yfr9dch485f9hc529fh"
+        }
+      },
+      "FriendCode": "23rjd3984udj375fh48yfh84",
+      "projectCount": 3
+    }
+  },
+  {
+    "UserId": 2,
+    "UserData": {
+      "UserName": "Rushil",
+      "UserEmail": "RUSH@gmail.com",
+      "SignUpMethods": {
+        "google": true,
+        "facebook": false
+      },
+      "UserPassword": "ank",
+      "ForgotPassUse": 0,
+      "Friends": {
+        "1": {
+          "Name": "jhon",
+          "FriendCode": "1eh2r37yfr9dch485f9hc529fh"
+        }
+      },
+      "FriendCode": "23rjd3984udj375fh48yfh84",
+      "projectCount": 3
+    }
+  }
+]
